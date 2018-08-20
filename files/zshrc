@@ -111,9 +111,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias dc="docker-compose"
-alias cdworkspace="cd ~/Dev/workspace"
-alias sshdev="ssh exp_of@d1devof19"
-
-KUBECONFIG=/home/PRUDHOMME-LOCAL/.kube/config:/home/PRUDHOMME-LOCAL/.kube/config_dev-ro:/home/PRUDHOMME-LOCAL/.kube/config_dev-ro-staging:/home/PRUDHOMME-LOCAL/.kube/config_dev-ro-prod
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
