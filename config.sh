@@ -1,5 +1,7 @@
 #!/bin/bash
 
+project=${pwd}
+
 # update sources
 apt-get update
 
@@ -11,13 +13,13 @@ cd ~
 
 # install zsh
 apt-get install -y zsh zsh-syntax-highlighting
-$ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 # ZSH as default shell
 chsh -s $(which zsh)
 
 
 # install powerlevel9k
-$ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
 # install zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -51,8 +53,8 @@ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 apt-get install -y nodejs npm
 
 # Copy files config
-cp files/zshrc ~/.zshrc
-cp files/vimrc ~/.vimrc
+cp $project/files/zshrc ~/.zshrc
+cp $project/files/vimrc ~/.vimrc
 
 
 
