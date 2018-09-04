@@ -13,7 +13,7 @@ cd ~
 
 # install zsh
 apt-get install -y zsh zsh-syntax-highlighting
-sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # ZSH as default shell
 chsh -s $(which zsh)
 
