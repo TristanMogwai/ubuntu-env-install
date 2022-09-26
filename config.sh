@@ -12,7 +12,7 @@ apt-get install -y git
 cd ~
 
 # install zsh
-apt-get install -y zsh zsh-syntax-highlighting
+apt-get install -y zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # ZSH as default shell
 chsh -s $(which zsh)
@@ -24,6 +24,8 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 # install zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
+# instal zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # install Docker
 if [ ! -f /usr/bin/docker]
@@ -49,7 +51,7 @@ then
 fi
 
 # install Node 8 & npm
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 apt-get install -y nodejs npm
 
 # Copy files config
